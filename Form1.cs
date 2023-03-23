@@ -49,35 +49,6 @@ namespace Lab04
 
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
         
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void NMax_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void Name_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void namelist_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

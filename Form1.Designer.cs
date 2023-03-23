@@ -59,7 +59,7 @@
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(125, 27);
             this.Name.TabIndex = 0;
-            this.Name.TextChanged += new System.EventHandler(this.Name_TextChanged);
+            
             // 
             // by
             // 
@@ -86,7 +86,7 @@
             this.label1.Size = new System.Drawing.Size(26, 20);
             this.label1.TabIndex = 3;
             this.label1.Text = "ชื่อ";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
+            
             // 
             // label2
             // 
@@ -196,7 +196,7 @@
             this.NMax.Name = "NMax";
             this.NMax.Size = new System.Drawing.Size(93, 33);
             this.NMax.TabIndex = 26;
-            this.NMax.TextChanged += new System.EventHandler(this.NMax_TextChanged);
+            
             // 
             // AVG
             // 
@@ -205,7 +205,6 @@
             this.AVG.Name = "AVG";
             this.AVG.Size = new System.Drawing.Size(234, 33);
             this.AVG.TabIndex = 25;
-            this.AVG.TextChanged += new System.EventHandler(this.textBox3_TextChanged);
             // 
             // Min
             // 
@@ -248,7 +247,7 @@
             this.namelist.Name = "namelist";
             this.namelist.Size = new System.Drawing.Size(234, 172);
             this.namelist.TabIndex = 20;
-            this.namelist.TextChanged += new System.EventHandler(this.namelist_TextChanged);
+                
             // 
             // total
             // 
