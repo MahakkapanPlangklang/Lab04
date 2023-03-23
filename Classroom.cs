@@ -10,7 +10,11 @@ namespace Lab04
     public class Classroom
     {
         private string name;
-        List<Person> persons = new List<Person>();   
+        List<Person> persons = new List<Person>();
+        private int ageSum = 0;
+        private Person min = null;
+        private Person max = null;
+
 
         public Classroom(string name) 
         {
@@ -20,6 +24,26 @@ namespace Lab04
         public void addperson2Class(Person p) 
         {
             this.persons.Add(p);
+            this.ageSum += p.getAge();
+
+            if (max == null || p.getGPA() > max.getGPA())
+            {
+                this.max = p;
+            }
+            if (min == null || p.getGPA() < min.getGPA())
+            {
+                this.min = p;
+            }
+
+
+
+
+
+
+
+
+
+
         }
 
         public string showallpersoninclass()    
@@ -57,51 +81,51 @@ namespace Lab04
             result= result/a;
             return result;
         }
-        public double maxGPA()
+ 
+        public string NMinGPA()
         {
-            double max = 0;
-            foreach (Person p in this.persons)
-            {
-
-                if (max < double.Parse(p.getGPA().ToString()))
-                {
-                    max = double.Parse(p.getGPA().ToString());
-                }
-
-            }
-            return max;
+            return this.min.getName();
         }
-
-        public double minGPA()
+        public double MinGPA()
         {
-            //double a= p.getGPA().ToString();
-            double min = 0;
-            foreach (Person p in this.persons)
+            if (min == null)
             {
-
-                if (min < double.Parse(p.getGPA().ToString()))
-                {
-                    min = double.Parse(p.getGPA().ToString());
-                }
-
+                return 0; 
             }
-            return min;
+            return this.min.getGPA();
         }
-        public string maxp()
+        public string NMaxGPA()
         {
-            string resultp = "";
-            double maxp = 0;
+            return this.max.getName();
+        }
+        public double MaxGPA()
+        {
+            if (max == null)
+            {
+                return 0; // 
+            }
+            return this.max.getGPA();
+        }
+        public int getPersonCount()
+        {
+            return this.persons.Count;
+        }
+        public int getAgeSumaryOfThisClass()
+        {
+            return this.ageSum;
+        }
+        public double getAgeAverage()
+        {
+            return this.ageSum / this.persons.Count;
+        }
+        public double GPAAverage()
+        {
+            double _avg = 0.0;
             foreach (Person p in this.persons)
             {
-
-                if (maxp >= double.Parse(p.getGPA().ToString()))
-                {
-                    //maxp = double.Parse(p.getGPA().ToString());
-                    resultp = p.getName().ToString();
-                }
-                
+                _avg += p.getGPA();
             }
-            return resultp;
+            return _avg / this.persons.Count;
         }
     }
 }

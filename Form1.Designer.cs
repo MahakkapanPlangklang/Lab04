@@ -59,6 +59,7 @@
             this.Name.Name = "Name";
             this.Name.Size = new System.Drawing.Size(125, 27);
             this.Name.TabIndex = 0;
+            this.Name.TextChanged += new System.EventHandler(this.Name_TextChanged);
             // 
             // by
             // 
@@ -195,6 +196,7 @@
             this.NMax.Name = "NMax";
             this.NMax.Size = new System.Drawing.Size(93, 33);
             this.NMax.TabIndex = 26;
+            this.NMax.TextChanged += new System.EventHandler(this.NMax_TextChanged);
             // 
             // AVG
             // 
@@ -246,6 +248,7 @@
             this.namelist.Name = "namelist";
             this.namelist.Size = new System.Drawing.Size(234, 172);
             this.namelist.TabIndex = 20;
+            this.namelist.TextChanged += new System.EventHandler(this.namelist_TextChanged);
             // 
             // total
             // 

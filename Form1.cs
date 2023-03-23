@@ -7,7 +7,6 @@ namespace Lab04
     public partial class Form1 : Form
     {
         Classroom classroom;
-        Person p;
         public Form1()
         {
             InitializeComponent();
@@ -25,16 +24,16 @@ namespace Lab04
             Person person = new Person(name,iYear,g);
             this.classroom.addperson2Class(person);
 
+            
+
             this.namelist.Text =this.classroom.showallpersoninclass();
             this.total.Text = this.classroom.totalAge().ToString();
-            //this.Max.Text = this.classroom.maxgpa().ToString();
-          //  double a = this.classroom.avggpa();
-           // double b = Convert.To(this.classroom.avggpa());
-            this.AVG.Text = this.classroom.avggpa().ToString();
-            this.Max.Text = this.classroom.maxGPA().ToString();
-            this.Min.Text = this.classroom.minGPA().ToString();
-            this.NMax.Text = this.classroom.maxp().ToString();
-            //this.NMin.Text = this.classroom.minGPA().ToString();
+            this.AVG.Text = this.classroom.GPAAverage().ToString();
+            this.Min.Text = this.classroom.MinGPA().ToString();
+            this.Max.Text = this.classroom.MaxGPA().ToString();
+            this.NMax.Text = this.classroom.NMaxGPA().ToString();
+            this.NMin.Text = this.classroom.NMinGPA().ToString();
+           
 
 
 
@@ -54,6 +53,7 @@ namespace Lab04
         {
 
         }
+        
 
         private void label7_Click(object sender, EventArgs e)
         {
@@ -61,6 +61,21 @@ namespace Lab04
         }
 
         private void textBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void NMax_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Name_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void namelist_TextChanged(object sender, EventArgs e)
         {
 
         }
